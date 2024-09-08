@@ -1,0 +1,12 @@
+.pokemon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  mat-card {
+    cursor: pointer;
+    padding: 16px;
+    text-align: center;
+  }
+  

@@ -1,0 +1,21 @@
+<h1 mat-dialog-title class="dialog-title">{{ pokemonDetails?.name | titlecase }}</h1>
+
+<div mat-dialog-content class="dialog-content">
+  <div class="pokemon-image">
+    <img [src]="pokemonDetails?.sprites?.front_default" alt="{{ pokemonDetails?.name }}" />
+  </div>
+
+  <div class="pokemon-info">
+    <p><strong>Height:</strong> {{ pokemonDetails?.height / 10 }} m</p>
+    <p><strong>Weight:</strong> {{ pokemonDetails?.weight / 10 }} kg</p>
+    <p><strong>Types:</strong> 
+      <span *ngFor="let type of pokemonDetails?.types">
+        {{ type.type.name | titlecase }}
+      </span>
+    </p>
+  </div>
+</div>
+
+<div mat-dialog-actions class="dialog-actions">
+  <button mat-button mat-dialog-close color="accent">Close</button>
+</div>

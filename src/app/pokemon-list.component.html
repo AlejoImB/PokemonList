@@ -1,0 +1,5 @@
+<div class="pokemon-list">
+  <mat-card *ngFor="let pokemon of pokemons" (click)="openDialog(pokemon)">
+    <mat-card-title>{{ pokemon.name }}</mat-card-title>
+  </mat-card>
+</div>
